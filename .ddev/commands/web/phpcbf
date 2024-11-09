@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run phpcbf in web/modules/custom
+## Usage: phpcbf
+## Example: "phpcbf"
+
+vendor/bin/phpcbf web/modules/custom/ vendor/bin/phpcbf web/themes/custom/

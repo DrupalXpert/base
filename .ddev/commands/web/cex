@@ -1,0 +1,8 @@
+#!/bin/bash
+
+## #ddev-generated
+## Description: export the configuration.
+## Usage: cex
+## Example: ddev cex
+
+drush config:export

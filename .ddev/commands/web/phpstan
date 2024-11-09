@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run phpstan in web/modules/custom
+## Usage: phpstan
+## Example: "phpstan"
+
+vendor/bin/phpstan

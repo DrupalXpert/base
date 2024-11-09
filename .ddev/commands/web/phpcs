@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run phpcs in web/modules/custom
+## Usage: phpcs
+## Example: "phpcs"
+
+vendor/bin/phpcs
