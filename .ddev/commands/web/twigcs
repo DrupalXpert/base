@@ -4,4 +4,4 @@
 ## Usage: twigcs
 ## Example: "twigcs"
 
-vendor/bin/twigcs web/themes/custom/drupales
+vendor/bin/twig-cs-fixer lint --fix web/themes/custom
