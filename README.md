@@ -15,8 +15,8 @@ To set up your Drupal 11 project, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/CesarMSFelipe/dx-project-base
-   cd dx-project-base
+   git clone https://github.com/DrupalXpert/base my_project
+   cd my_project
    ```
 
 2. **Start the DDEV Environment**:
@@ -62,7 +62,12 @@ DX Project Base comes pre-configured with essential development tools to ensure 
   ddev phpstan
   ```
 
-- **Twig Code Sniffer (`twigcs`)**: Ensures that Twig template files follow coding standards.
+- **Twig Code Sniffer Fix (`fix-twig`)**: Ensures that Twig template files follow coding standards.
+  ```bash
+  ddev fix-twig
+  ```
+
+- **Twig Code Sniffer Lint (`twigcs`)**: Ensures that Twig template files follow coding standards.
   ```bash
   ddev twigcs
   ```
