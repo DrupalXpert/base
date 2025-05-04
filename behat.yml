@@ -1,0 +1,37 @@
+default:
+  suites:
+    default:
+      paths:
+        - "%paths.base%/features"
+      contexts:
+        - Features\Bootstrap\FeatureContext
+        - DrevOps\BehatScreenshotExtension\Context\ScreenshotContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\DrushContext
+        - Drupal\DrupalExtension\Context\RawDrupalContext
+  extensions:
+    Drupal\MinkExtension:
+      base_url: https://drupalxpert.ddev.site
+      sessions:
+        default:
+          browserkit_http: ~
+      browser_name: 'chrome'
+      selenium2:
+        wd_host: "http://ddev-drupalxpert-selenium-chrome:4444/wd/hub"
+        capabilities: { "version": "*", 'chrome': {'switches':['--start-maximized', '--ignore-certificate-errors', '--allow-insecure-localhost', '--disable-dev-shm-usage', '--window-size=2560,1440', '--high-dpi-support=1', '--force-device-scale-factor=0.65', '--allowed-ips=0.0.0.0']}}
+      javascript_session: selenium2
+    Drupal\DrupalExtension: 
+      blackbox: ~ 
+      api_driver: 'drupal' 
+      drush_driver: drush 
+      drupal: 
+        drupal_root: 'web' 
+      drush:
+        root: '/var/www/html/web' 
+    DrevOps\BehatScreenshotExtension:
+      dir: '%paths.base%/features/screenshots'
+      fail: true
+      purge: true
+    DrevOps\BehatFormatProgressFail\FormatExtension: ~

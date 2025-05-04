@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run bheat tests
+## Usage: behat
+## Example: "behat"
+
+exec vendor/bin/behat --tags=@javascript -v --format=pretty
